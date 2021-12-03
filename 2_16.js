@@ -20,3 +20,18 @@ getNakamaByIdAsync(10)
     .catch((err) => {
         console.log(`Error: ${err}`);
     });
+
+const getNakamaByIdAsyncAwait = async(id) => {
+    console.log("The selected nakama is...");
+    return await getNakamaByIdAsync(id);
+}
+
+setTimeout(() => {
+    getNakamaByIdAsyncAwait(0)
+        .then((nakama) => {
+            console.log(`It is ${nakama.lastname} ${nakama.name}!`);
+        })
+        .catch((err) => {
+            console.log(`It wasn't... ${err}`);
+        });
+}, 2000);
