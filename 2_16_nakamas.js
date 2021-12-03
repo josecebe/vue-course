@@ -66,6 +66,16 @@ export const getNakamaById = (id) => {
     return nakamas.find((nakama) => nakama.id === id);
 }
 
+export const getNakamaByIdAsync = (id) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const nakama = getNakamaById(id);
+            if (nakama) resolve(nakama);
+            else reject("Nakama doesn't exist");
+        }, 1000);
+    });
+}
+
 export const getNakamasByCountry = (country) => {
     return nakamas.filter((nakama) => nakama.country === country);
 }
