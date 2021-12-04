@@ -5,11 +5,32 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Vue.js Intro</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
-    <div id="myApp"></div>
+    <div id="myApp">
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
+        <button v-on:click="changeDescription">Change description</button>
+        <hr />
 
-    <script src="https://unpkg.com/vue@next"></script>
+        <h1>Batman Quotes</h1>
+        <ul>
+            <li v-for="({quote, author}, index) in quotes">
+                <span>{{index + 1}} - {{quote}}</span>
+                <blockquote v-if="author">-{{author}}</blockquote>
+                <!--blockquote v-show="author">-{{author}}</blockquote-->
+            </li>
+        </ul>
+        <hr />
+
+        <h1>Insert Quote <small>{{newQuote}}</small>:</h1>
+        <input
+            type="text"
+            v-model="newQuote"
+            v-on:keypress.enter="addQuote" />
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
