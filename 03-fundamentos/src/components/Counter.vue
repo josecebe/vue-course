@@ -1,5 +1,5 @@
 <template>
-    <h2>{{title}}</h2>
+    <h2 data-test-id="title">{{title}}</h2>
     <p>{{counter}} <sup>2</sup> = {{getSquareValue}}</p>
     <p data-test-id="counter">{{counter}}</p>
 
