@@ -2,7 +2,7 @@
     <h2>{{title}}</h2>
     <p>{{counter}} <sup>2</sup> = {{getSquareValue}}</p>
 
-    <div>
+    <div class="buttons">
         <button @click="increaseCounter">+1</button>
         <button @click="decreaseCounter">-1</button>
     </div>
