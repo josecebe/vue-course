@@ -1,10 +1,11 @@
 <template>
     <h2>{{title}}</h2>
     <p>{{counter}} <sup>2</sup> = {{getSquareValue}}</p>
+    <p data-test-id="counter">{{counter}}</p>
 
     <div class="buttons">
-        <button @click="increaseCounter">+1</button>
-        <button @click="decreaseCounter">-1</button>
+        <button data-test-id="increase-counter-button" @click="increaseCounter">+1</button>
+        <button data-test-id="decrease-counter-button" @click="decreaseCounter">-1</button>
     </div>
 </template>
 
