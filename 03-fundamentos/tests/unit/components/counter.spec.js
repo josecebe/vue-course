@@ -37,4 +37,10 @@ describe('Counter Test', () => {
         const counterValue = wrapper.find('[data-test-id="counter"]').text();
         expect(counterValue).toBe('11');
     });
+
+    test('Default "start" value is working correctly', () => {
+        const {start} = wrapper.props();
+        const counterValue = Number(wrapper.find('[data-test-id="counter"]').text());
+        expect(counterValue).toBe(start);
+    });
 });
