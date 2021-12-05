@@ -14,9 +14,9 @@ describe('Counter Test', () => {
 
     test('H2 should contain the default value', () => {
         const h2Elem = wrapper.find('h2');
-        expect(h2Elem.exists()).toBeTruthy();
-
         const h2Text = h2Elem.text();
+
+        expect(h2Elem.exists()).toBeTruthy();
         expect(h2Text).toBe('Counter');
     });
 
@@ -40,6 +40,7 @@ describe('Counter Test', () => {
 
     test('Default "start" value is working correctly', () => {
         const {start} = wrapper.props();
+
         const counterValue = Number(wrapper.find('[data-test-id="counter"]').text());
         expect(counterValue).toBe(start);
     });

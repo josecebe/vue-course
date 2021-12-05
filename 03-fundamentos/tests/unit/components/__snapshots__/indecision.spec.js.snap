@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Indecision Tests Should match the snapshot 1`] = `
+<!--v-if-->
+<div class="bg-dark"></div>
+<div class="indecision-container"><input data-test-id="input" type="text" placeholder="Make a question">
+  <p>Remember to end your question using a interrogation symbol '?'</p>
+  <div>
+    <h2></h2>
+    <!--v-if-->
+  </div>
+</div>
+`;
